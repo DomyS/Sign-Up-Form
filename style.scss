@@ -1,0 +1,174 @@
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$darkBlue: hsl(249, 10%, 26%);
+$grayBlue: hsl(246, 25%, 77%);
+$font-stack: "Poppins", sans-serif;
+
+* {
+  margin: 0;
+}
+body {
+  background: $Red;
+  background-image: url(/images/bg-intro-desktop.png);
+  font-family: $font-stack;
+}
+.container {
+  h1 {
+    color: #ffffff;
+    font-family: $font-stack;
+    font-size: 3rem;
+    width: 65%;
+    margin: 30% auto;
+  }
+  p {
+    color: #ffffff;
+    width: 65%;
+    margin: -28% auto;
+  }
+}
+.leftSide {
+  position: relative;
+  width: 55%;
+  float: left;
+  left: 50px;
+}
+.rightSide {
+  position: relative;
+  width: 45%;
+  float: right;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 0.8rem;
+  }
+  .upperCard {
+    height: 3vh;
+    width: 75%;
+    font-size: 1.2rem;
+    background: $Blue;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 15%;
+    color: #ffffffd5;
+    -webkit-box-shadow: -1px 7px 3px -1px rgba(53, 53, 53, 0.3);
+    -moz-box-shadow: -1px 7px 3px -1px rgba(53, 53, 53, 0.3);
+    box-shadow: -1px 7px 3px -1px rgba(53, 53, 53, 0.3);
+    p {
+      font-size: 1rem;
+    }
+  }
+  form {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 58vh;
+    background: #ffffff;
+    border-radius: 8px;
+    margin: 5% 0 5% 0;
+    justify-content: space-evenly;
+    -webkit-box-shadow: -1px 7px 3px -1px rgba(53, 53, 53, 0.3);
+    -moz-box-shadow: -1px 7px 3px -1px rgba(53, 53, 53, 0.3);
+    box-shadow: -1px 7px 3px -1px rgba(53, 53, 53, 0.3);
+    h6 {
+      position: relative;
+      top: 2.5%;
+      left: 8%;
+      color: hsl(354, 100%, 66%);
+    }
+    button {
+      cursor: pointer;
+      width: 85%;
+      margin: 25px auto;
+      background: $Green;
+      padding: 10px;
+      border: 1px solid $Green;
+      border-radius: 8px;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 600;
+      -webkit-box-shadow: 0px 5px 0px -1px rgba(16, 165, 100, 0.8);
+      -moz-box-shadow: 0px 5px 0px -1px rgba(16, 165, 100, 0.8);
+      box-shadow: 0px 5px 0px -1px rgba(16, 165, 100, 0.8);
+    }
+    p {
+      font-size: 0.6rem;
+      text-align: center;
+      margin-top: -30px;
+      font-weight: 700;
+      color: $grayBlue;
+      margin-bottom: 25px;
+    }
+    input {
+      position: relative;
+      width: 78%;
+      margin: 0 auto;
+      border: 1px solid $grayBlue;
+      border-radius: 4px;
+      top: 17px;
+      padding: 16px;
+      &::placeholder {
+        font-weight: 700;
+      }
+    }
+  }
+}
+#inputText,
+#submit,
+#firstText,
+#lastText,
+#email,
+#password {
+  z-index: 1000;
+}
+
+footer {
+  position: relative;
+  top: 40px;
+  .attribution {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .leftSide {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+  .rightSide {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    left: 12%;
+    form {
+      p {
+        width: 65%;
+        font-size: 0.55rem;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: -25px;
+      }
+    }
+    .upperCard {
+      margin-top: 40%;
+      height: 7vh;
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
